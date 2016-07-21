@@ -1,0 +1,27 @@
+<h1>Maps#index</h1>
+<p>Find me in app/views/maps/index.html.erb</p>
+
+<!--div align="center" id="vmap" style="margin-right: auto; margin-left: auto; width: 800px; height: 400px; "></div-->
+<div align="center" id="vmap" style="margin-right: 0; margin-left: 0; width: 100%; height: 500px; ">
+<%=
+  map(:center => {
+      :latlng => [0, 174.7633],
+      :zoom => 1,
+
+  },
+      :markers => Location.all.map{|location| location.to_google_map}
+  )
+%>
+
+<ul>
+  <%- Location.group(:country).count.each do |country, count| %>
+  <li><%= country %>: <%= count %></li>
+  <%- end %>
+</ul>
+
+<ul>
+  <%- Location.all.each do |l| %>
+    <%= l.latitude %>
+  <%- end %>
+</ul>
+</div>

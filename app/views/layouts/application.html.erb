@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Happy</title>
+
+
+  <style media="all">
+    html, body{height:100%; text-align:center;}
+    #outer{
+      min-height:100%;
+    }
+
+    * html #outer{height:100%;} /* for IE 6, if you care */
+
+    body, p { margin:0; padding:0}
+
+  </style>
+
+  <%= stylesheet_link_tag "application" %>
+
+
+  <!--[if lt IE 9]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+  </script>
+  <![endif]-->
+
+  <!--
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+ <link href="../../../../manifestinteractive-jqvmap-db5f009/dist/jqvmap.css" media="screen" rel="stylesheet" type="text/css" />
+   <script src="../../../../manifestinteractive-jqvmap-db5f009/dist/jquery.vmap.js" type="text/javascript"></script>
+   <script src="../../../../manifestinteractive-jqvmap-db5f009/dist/maps/jquery.vmap.world.js" type="text/javascript"></script>
+ -->
+
+  <!--link href="../../assets/jqvmap.css" media="screen" rel="stylesheet" type="text/css" /-->
+
+  <!--script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script-->
+  <!--<script src="../../assets/jquery.vmap.js" type="text/javascript"></script>-->
+  <!--<script src="../../assets/jquery.vmap.min.js" type="text/javascript"></script>-->
+  <!--script src="../../assets/world.js" type="text/javascript"></script-->
+  <!--<script src="../../assets/jquery.vmap.world.js" type="text/javascript"></script>-->
+  <%= javascript_include_tag "application" %>
+  <!--script>
+    jQuery(document).ready(function () {
+//      jQuery('#vmap').vectorMap({
+//        map: 'world_en',
+//        backgroundColor: '#333333',
+//        color: '#ffffff',
+//        hoverOpacity: 0.7,
+//        selectedColor: '#666666',
+//        enableZoom: true,
+//        showTooltip: true,
+//        scaleColors: ['#C8EEFF', '#006491'],
+//        values: sample_data,
+//        normalizeFunction: 'polynomial'
+//      });
+      jQuery('#vmap').vectorMap({ map: 'world_en' });
+    });
+  </script-->
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>

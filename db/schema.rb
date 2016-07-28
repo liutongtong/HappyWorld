@@ -14,8 +14,8 @@
 ActiveRecord::Schema.define(version: 20160128065710) do
 
   create_table "locations", force: true do |t|
-    t.decimal  "longitude",  precision: 10, scale: 7
-    t.decimal  "latitude",   precision: 10, scale: 7
+    t.decimal  "longitude",  precision: 6, scale: 7
+    t.decimal  "latitude",   precision: 6, scale: 7
     t.string   "ip"
     t.string   "country"
     t.string   "city"
